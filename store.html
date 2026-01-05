@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">𝑷𝒍𝒖𝒈𝒈𝒆𝒅‑𝑰𝒏 𝑬𝑭𝑩 𝑯𝒖𝒃 𝑺𝒕𝒐𝒓𝒆</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="store.html">Store</a>
+    <a href="proofs.html">Proofs</a>
+    <a href="about.html">About</a>
+  </div>
+</header>
+
+<section class="section">
+<h2>Coin Pricing</h2>
+<div class="grid">
+  <div class="card fade-up">1000 🪙 <span>₹820 / $9</span></div>
+  <div class="card fade-up">2130 🪙 <span>₹1500 / $17</span></div>
+  <div class="card fade-up">3250 🪙 <span>₹2300 / $25</span></div>
+  <div class="card fade-up">5700 🪙 <span>₹3700 / $41</span></div>
+  <div class="card fade-up">12800 🪙 <span>₹7500 / $84</span></div>
+  <div class="card fade-up">25600 🪙 <span>₹14800 / $162</span></div>
+</div>
+<a class="btn primary" href="https://wa.me/18437139006">Buy Coins</a>
+</section>
+
+<section class="section">
+<h2>Account Sales</h2>
+<p class="meta">Accounts from <strong>$25+</strong> | India: <strong>₹3000+</strong></p>
+<a class="btn outline" href="https://wa.me/18437139006">Enquire</a>
+</section>
+
+<footer>Partners with Konami and eFootball™.</footer>
+
+<script>
+const faders=document.querySelectorAll('.section, .card, .proof');
+const observer=new IntersectionObserver((entries,observer)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target);}
+  });
+}, {threshold:0.2});
+faders.forEach(fader=>observer.observe(fader));
+</script>
+
+</body>
+</html>
